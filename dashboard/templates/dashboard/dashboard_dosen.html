@@ -1,0 +1,46 @@
+{% extends "dashboard/layout.html" %}
+
+{% load static %}
+
+{% block body %}
+<div class="container dashboard_text">
+    <h1 class="text-start">Dashboard</h1>
+</div>
+
+    {% if message %}
+    <div class="alert alert-success container text-center" role="alert">
+        {{ message }}
+      </div>
+    {% else %}    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center">Jadwal Perkuliahan</h2>
+                <table class="table table-striped border text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Hari</th>
+                            <th scope="col">Jam</th>
+                            <th scope="col">Mata Kuliah</th>
+                            <th scope="col">Semester</th>
+                            <th scope="col">Ruangan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for jadwal in jadwal_dashboard %}
+                            <tr>
+                                <td>{{ jadwal.hari }}</td>
+                                <td>{{ jadwal.jam }}</td>
+                                <td>{{ jadwal.matkul }}</td>
+                                <td>{{ jadwal.semester }}</td>
+                                <td>{{ jadwal.ruang }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+{% endblock %}

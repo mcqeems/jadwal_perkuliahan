@@ -1,0 +1,35 @@
+{% extends "dashboard/layout.html" %}
+
+{% load static %}
+
+{% block body %}
+<div class="container dashboard_text">
+	<div class="row">
+		<div class="col-md-12">
+			<h1 class="text-center">Jadwal Perkuliahan</h1>
+			<table class="table table-striped border text-center">
+				<thead class="table-dark">
+					<tr>
+						<th scope="col">Hari</th>
+						<th scope="col">Jam</th>
+						<th scope="col">Mata Kuliah</th>
+						<th scope="col">Dosen</th>
+						<th scope="col">Ruangan</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for jadwal in jadwal_perkuliahan %}
+						<tr>
+							<td>{{ jadwal.hari }}</td>
+							<td>{{ jadwal.jam }}</td>
+							<td>{{ jadwal.matkul }}</td>
+							<td>{{ jadwal.dosen }}</td>
+							<td>{{ jadwal.ruang }}</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+{% endblock %}

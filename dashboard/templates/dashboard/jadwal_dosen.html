@@ -1,0 +1,41 @@
+{% extends "dashboard/layout.html" %}
+
+{% load static %}
+
+{% block body %}
+<div class="container dashboard_text">
+	<div class="row">
+		<div class="col-md-12">
+			<h1 class="text-center">Jadwal Perkuliahan</h1>
+			<table class="table table-striped border text-center">
+				<thead class="table-dark">
+					<tr>
+						<th scope="col">Hari</th>
+						<th scope="col">Jam</th>
+						<th scope="col">Mata Kuliah</th>
+						<th scope="col">Semester</th>
+						<th scope="col">Ruangan</th>
+						<th scope="col"> </th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for jadwal in jadwal_perkuliahan %}
+						<tr>
+							<td>{{ jadwal.hari }}</td>
+							<td>{{ jadwal.jam }}</td>
+							<td>{{ jadwal.matkul }}</td>
+							<td>{{ jadwal.semester }}</td>
+							<td>{{ jadwal.ruang }}</td>
+							<td>
+								<a class="navbar-brand" href="{% url 'edit_jadwal' jadwal.id %}">
+									<img src="{% static 'dashboard/images/edit-button-svgrepo-com.svg' %}" alt="edit_icon" width="23" height="23">
+								</a>
+							</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+{% endblock %}

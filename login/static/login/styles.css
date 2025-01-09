@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+        font-size: 14px;
+    }
+}
+
+form {
+    padding: 0 30px 30px 30px;
+    width: 500px;
+}
+
+h1 {
+    margin-bottom: 25px;
+}
+
+.logo_unida_login {
+    width: 50%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.login_skin {
+    border-radius: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.219);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

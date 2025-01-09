@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+        font-size: 14px;
+    }
+}
+
+.filter-white {
+    filter: brightness(0) saturate(100%) invert(76%) sepia(0%) saturate(5197%) hue-rotate(281deg) brightness(85%) contrast(79%);
+}
+
+.dashboard_text {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.margin_top {
+    margin-top: 100px;
+}
+
+.form-control label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+.form-control input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.form-control select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+input#id_matkul {
+    pointer-events: none;
+    background-color: #f0f0f0;
+    color: #999;
+}
+
+input#id_dosen {
+    pointer-events: none;
+    background-color: #f0f0f0;
+    color: #999;
+}
+
+select#id_semester {
+    pointer-events: none;
+    background-color: #f0f0f0;
+    color: #999;
+}
